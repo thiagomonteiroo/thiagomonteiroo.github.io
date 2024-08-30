@@ -1,0 +1,39 @@
+/* Heart */
+.heart {
+	--w: 300px; /* Base size */
+	--angle: 0deg; /* Rotation */
+	position: relative;
+	width: var(--w);
+	height: var(--w);
+	transform: rotate(var(--angle));
+}
+
+.heart::before {
+	content: "";
+	position: absolute;
+	top: 12.5%;
+	left: 50%;
+	width: 50%;
+	height: 80%;
+	background: #2e01a0;
+	border-radius: calc(var(--w) / 3) calc(var(--w) / 4) 0 0;
+	box-sizing: border-box;
+	transform-origin: 0 100%;
+	transform: rotate(-45deg);
+	opacity: 0.7; /* For visibility during development */
+}
+
+.heart::after {
+	content: "";
+	position: absolute;
+	top: 12.5%;
+	right: 50%;
+	width: 50%;
+	height: 80%;
+	background: #300286;
+	border-radius: calc(var(--w) / 4) calc(var(--w) / 3) 0 0;
+	box-sizing: border-box;
+	transform: rotate(45deg);
+	transform-origin: 100% 100%;
+	opacity: 0.7; /* For visibility during development */
+}
